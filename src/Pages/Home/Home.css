@@ -1,0 +1,396 @@
+/* <---------------- Banner section  ----------------> */
+
+.bannerMain {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background-color: #fff;
+  background-image: url('../../Assets/Images/banner.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+.bannerMain > img {
+  /* background-color: #fff; */
+  max-height: 90%;
+  width: auto;
+
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+}
+.bannerMain > h2 {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: var(--weight_bold);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+@media all and (orientation: portrait) {
+  .bannerMain {
+    height: 75vh;
+    max-height: 75vh;
+  }
+  .bannerMain > h2 {
+    display: block;
+  }
+}
+
+/* <---------------- Why choose us  ----------------> */
+
+.whychooseus {
+  min-height: 90vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6vh 0 0;
+}
+.whychooseus > section {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(30vh, 42vh));
+  justify-content: center;
+  gap: 2vh 4vw;
+  padding: 0 8vw;
+}
+.whychooseus > h2 {
+  font-size: var(--font_large);
+  font-weight: var(--weight_bold);
+  text-align: center;
+}
+.whychooseus > h4 {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  margin: 4vh 5vw 7vh;
+
+  max-width: 80vh;
+  text-align: center;
+}
+
+.whychooseCard {
+  position: relative;
+  min-height: 18vh;
+  display: flex;
+}
+.whychooseIMG {
+  height: 12%;
+  margin: 1vh 1vh 0 0;
+  clip-path: circle(1.5% at 0 16%);
+}
+.whychooseText {
+  flex: 1;
+  opacity: 0.5;
+}
+.whychooseCard h3 {
+  font-size: var(--font_medium);
+  font-weight: var(--weight_bold);
+}
+.whychooseCard h4 {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+}
+
+/* <---------------- Our Team  ----------------> */
+.ourteam {
+  min-height: 86vh;
+  width: 100%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  background-color: var(--orange_lighter);
+  gap: 4vh;
+  padding: 4vh;
+}
+.ourteam > img {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  z-index: 2;
+  height: 80vh;
+}
+.ourteam > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ourteam > section:first-of-type {
+  flex: 1.12;
+  align-items: flex-end;
+}
+.ourteam > section:first-of-type > img {
+  width: 60vh;
+  max-width: 100vw;
+}
+.ourteam > section:last-of-type {
+  min-width: 50vw;
+  flex: 1;
+  align-items: flex-start;
+  padding: 0 0 0 5vw;
+}
+.ourteam > section:last-of-type > h6 {
+  font-size: 0.8rem;
+  color: var(--orange_primary);
+  font-weight: var(--weight_normal);
+}
+.ourteam > section:last-of-type > h4 {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  max-width: 70vh;
+}
+.ourteam > section:last-of-type > h2 {
+  font-size: var(--font_large);
+  font-weight: var(--weight_bold);
+  margin: 0 0 2vh 0;
+}
+.ourteam > section:last-of-type > button {
+  background-color: var(--orange_primary);
+  color: #fff;
+}
+
+/* <---------------- Latest news ----------------> */
+.latestNews {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* background-color: antiquewhite; */
+}
+.latestNews > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+  padding: 2vh;
+  min-width: 75vw;
+  width: 100%;
+  gap: 3vh;
+}
+.newsHeader > h2 {
+  font-size: var(--font_large);
+  font-weight: var(--weight_bold);
+}
+.newsHeader > .btn {
+  background-color: var(--orange_primary);
+  color: #fff;
+}
+.newsCard {
+  --size: 46vh;
+  width: var(--size);
+  min-height: calc(var(--size) * 1.1);
+
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+  transition: 0.25s;
+  cursor: pointer;
+
+  opacity: 0;
+}
+/* .newsCard:hover {
+  transform: scale(1.04);
+} */
+.newsCard > img {
+  width: 100%;
+  height: auto;
+}
+.newsCard > h6 {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  margin-top: 5%;
+}
+.newsCard > h4 {
+  font-size: var(--font_medium);
+  font-weight: var(--weight_bold);
+  flex: 0.8;
+}
+.newsCard > h5 {
+  color: var(--orange_primary);
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+}
+@media all and (orientation: portrait) {
+  .newsHeader > .btn {
+    color: var(--orange_primary);
+    background-color: #fff;
+  }
+}
+/* <---------------- candidates and employers ----------------> */
+.candemploy {
+  min-height: 80vh;
+  height: fit-content;
+  background-color: var(--grey_primary);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding: 2vh 0;
+}
+.candemploy > img {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  z-index: 1;
+
+  height: 75%;
+}
+.candCard {
+  --size: 48vh;
+  min-height: var(--size);
+  width: calc(var(--size) * 1.3);
+
+  background-color: #fff;
+  margin: 2vh;
+  padding: 2.5vh;
+  z-index: 2;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  transition: 0.35s;
+
+  opacity: 0;
+}
+.candCard:hover {
+  -webkit-box-shadow: 0px 10px 35px -15px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 10px 35px -15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 10px 35px -15px rgba(0, 0, 0, 0.35);
+}
+.candCard > img {
+  height: 18%;
+}
+.candCard > h4 {
+  font-size: var(--font_medium);
+  font-weight: var(--weight_bold);
+}
+.candCard > h6 {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+}
+.candCard > button {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  color: var(--orange_primary);
+}
+
+/* <---------------- speak to experts section ---------------> */
+.speakToExpert {
+  min-height: 50vh;
+  background-color: var(--orange_primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.speakToExpert > * {
+  margin: 2vh 0;
+  color: #fff;
+}
+.speakToExpert > h2 {
+  font-size: var(--font_large);
+  font-weight: var(--weight_bold);
+  width: 100%;
+  text-align: center;
+}
+.speakToExpert > h6 {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  width: 90%;
+  max-width: 100vh;
+  text-align: center;
+}
+.speakToExpert > .btn {
+  color: var(--orange_primary);
+}
+
+/* <-------------------- Animation utility ---------------------> */
+.inDisplayFadeIn {
+  animation: inDisplayFadein forwards ease-out;
+  animation-duration: var(--inDisplayFadeIn_time);
+  animation-delay: var(--inDisplayFadeIn_delay);
+}
+@keyframes inDisplayFadein {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tickMarked {
+  animation: tickMarkedAnn ease-in-out forwards;
+  animation-duration: var(--inDisplayFadeIn_time);
+  animation-delay: var(--inDisplayFadeIn_delay);
+  clip-path: circle(1.5% at 0 16%);
+}
+@keyframes tickMarkedAnn {
+  0% {
+    clip-path: circle(1.5% at 0 16%);
+  }
+  50% {
+    clip-path: circle(49.7% at 1% 39%);
+  }
+  100% {
+    clip-path: circle(116.4% at 0 59%);
+  }
+}
+.justfadeIn {
+  animation: justfadeAnn ease-in-out forwards;
+  animation-duration: var(--inDisplayFadeIn_time);
+  animation-delay: var(--inDisplayFadeIn_delay);
+}
+@keyframes justfadeAnn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media all and (orientation: portrait) {
+  .newsCard {
+    opacity: 1;
+  }
+  .whychooseIMG {
+    clip-path: circle(116.4% at 0 59%);
+  }
+  .whychooseText {
+    opacity: 1;
+  }
+}

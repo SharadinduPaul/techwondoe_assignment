@@ -1,0 +1,66 @@
+:root {
+  --nav_height: 8vh;
+
+  --font_large: 2.4rem;
+  --font_medium: clamp(1.2vh, 1.2rem, 3vh);
+  --font_small: 0.98rem;
+
+  --weight_bold: 600;
+  --weight_normal: 450;
+
+  --orange_primary: rgba(230, 105, 46, 1);
+  --orange_lighter: rgba(250, 225, 213, 0.3);
+  --grey_primary: rgba(237, 237, 237, 1);
+
+  --inDisplayFadeIn_delay: 0.5s;
+  --inDisplayFadeIn_time: 0.5s;
+}
+@media all and (orientation: portrait) {
+  :root {
+    --font_large: 3vh;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+::-moz-selection {
+  color: #fff;
+  background: var(--orange_primary);
+}
+::selection {
+  color: #fff;
+  background: var(--orange_primary);
+}
+.App {
+  min-height: 100%;
+  height: fit-content;
+  width: 100%;
+
+  padding-top: var(--nav_height);
+}
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.btn {
+  border-radius: 5px;
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+
+  padding: 1.8vh 3.8vh;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: translateY(-7.5%);
+  -webkit-box-shadow: 0px 6px 25px -13px var(--orange_primary);
+  -moz-box-shadow: 0px 6px 25px -13px var(--orange_primary);
+  box-shadow: 0px 6px 25px -13px var(--orange_primary);
+}

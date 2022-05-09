@@ -1,0 +1,103 @@
+.navMain {
+  height: var(--nav_height);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #fff;
+  padding: 0 3%;
+}
+.navMain > button {
+  height: 100%;
+  background-color: transparent;
+  padding: 0 1.6%;
+
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  background-color: #fff;
+
+  transition: 0.3s ease-out;
+}
+.navMain > button:hover {
+  background-color: var(--orange_lighter);
+}
+.navMain > .menuBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  /* background-color: rgb(199, 229, 255); */
+
+  --size: calc(var(--nav_height) * 0.6);
+  height: var(--size);
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.menuBtn:is(:focus, :active, :focus-within, :not(:focus)) {
+  background-color: #fff;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.menuBtn > div {
+  background-color: var(--orange_primary);
+  height: 6%;
+  width: 100%;
+  transition: 0.3s ease-out;
+  /* transform-origin: left; */
+}
+
+.menuOpenAnimation > div:first-child {
+  transform: translateY(calc(var(--size) * 0.25)) rotate(45deg);
+}
+.menuOpenAnimation > div:nth-child(2) {
+  transform: translateX(200%);
+}
+.menuOpenAnimation > div:last-child {
+  transform: translateY(calc(var(--size) * -0.25)) rotate(-45deg);
+}
+
+/* <--------------------- Navigation menu ----------------------> */
+.navMenu {
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #fff;
+  position: fixed;
+  top: var(--nav_height);
+  right: 0;
+  z-index: 18;
+  clip-path: circle(0% at 95% 0);
+  transition: 0.4s ease-in;
+}
+.navMenuOpen {
+  clip-path: circle(141.2% at 100% 0);
+}
+.navMenu > button {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  flex: 1;
+  width: 100%;
+}
+.navMenu > button:is(:active, :focus) {
+  background-color: var(--orange_lighter);
+}
+
+@media all and (max-width: 660px) {
+  .navMain > button {
+    display: none;
+  }
+  .navMain > .menuBtn {
+    display: flex;
+  }
+}

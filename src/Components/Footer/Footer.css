@@ -1,0 +1,80 @@
+.footerMain {
+  position: relative;
+  height: fit-content;
+  min-height: 36vh;
+  width: 100%;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  padding: 2vh 0;
+}
+.copyRight {
+  height: 7vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--grey_primary);
+
+  font-size: var(--font_small);
+}
+.footerMain > .socialContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  flex: 0.8;
+  min-width: fit-content;
+  padding: 1.6vh 4vw;
+  height: 20vh;
+}
+.socialContainer > img {
+  cursor: pointer;
+  margin: 1vh;
+  padding: 3px;
+  transition: 0.2s;
+}
+.socialContainer > img:hover {
+  transform: scale(1.2);
+}
+
+.footerMain > .buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  flex: 1.2;
+  margin: 0 5vw;
+}
+.buttonContainer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  height: 18vh;
+  width: 16vh;
+  min-width: fit-content;
+  margin: 2vh 0;
+  /* background-color: aquamarine; */
+}
+.buttonContainer > div > button {
+  background-color: transparent;
+}
+.buttonContainer > div > * {
+  font-size: var(--font_small);
+  font-weight: var(--weight_normal);
+  padding: 10px 2px;
+  transition: 0.2s;
+}
+.buttonContainer > div > button:hover {
+  transform: translateY(-10%);
+  color: var(--orange_primary);
+}
+
+@media all and (orientation: portrait) {
+  .footerMain {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
